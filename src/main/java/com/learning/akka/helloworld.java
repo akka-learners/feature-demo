@@ -16,7 +16,8 @@ public class helloworld {
         Config config = ConfigFactory.parseString("akka.loglevel = DEBUG \n" +
             "akka.actor.debug.lifecycle = on");
 
-        ActorSystem system = ActorSystem.create("FaultToleranceSample", config);
+        //ActorSystem system = ActorSystem.create("FaultToleranceSample", config);
+        ActorSystem system = ActorSystem.create("FaultToleranceSample");
         ActorRef worker = system.actorOf(Props.create(Worker.class), "worker");
         ActorRef listener = system.actorOf(Props.create(Listener.class), "listener");
         // start the work and listen on progress

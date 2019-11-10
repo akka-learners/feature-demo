@@ -1,4 +1,4 @@
-package com.learning.akka;
+package com.learning.akka.worker.actor;
 
 import static com.learning.akka.CounterServiceApi.GetCurrentCount;
 
@@ -6,6 +6,7 @@ import akka.actor.ActorRef;
 import akka.actor.UntypedActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
+import com.learning.akka.CounterServiceApi;
 
 /**
  * The in memory count variable that will send current value to the Storage,

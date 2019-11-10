@@ -1,8 +1,9 @@
-package com.learning.akka;
+package com.learning.akka.worker.actor;
 
 import akka.actor.UntypedActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
+import com.learning.akka.DummyDB;
 
 /**
  * Saves key/value pairs to persistent storage when receiving Store message.
