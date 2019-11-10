@@ -1,6 +1,5 @@
-package com.learning.akka;
+package com.learning.akka.worker.actor;
 
-import com.learning.akka.worker.actor.StorageApi;
 import java.util.HashMap;
 import java.util.Map;
 

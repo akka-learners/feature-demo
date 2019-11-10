@@ -1,27 +1,26 @@
-package com.learning.akka;
+package com.learning.akka.worker.actor;
 
 import static akka.actor.SupervisorStrategy.escalate;
 import static akka.actor.SupervisorStrategy.stop;
 import static akka.japi.Util.classTag;
 import static akka.pattern.Patterns.ask;
 import static akka.pattern.Patterns.pipe;
-import static com.learning.akka.CounterServiceApi.GetCurrentCount;
-import static com.learning.akka.WorkerApi.Do;
-import static com.learning.akka.WorkerApi.Start;
+import static com.learning.akka.worker.actor.CounterServiceApi.GetCurrentCount;
+import static com.learning.akka.worker.actor.WorkerApi.Do;
+import static com.learning.akka.worker.actor.WorkerApi.Start;
 
 import akka.actor.*;
 import akka.dispatch.Mapper;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
-import akka.japi.Function;
 import akka.util.Timeout;
 import java.util.concurrent.TimeUnit;
 import scala.concurrent.duration.Duration;
 
 
 /**
- * com.learning.akka.Worker performs some work when it receives the Start message. It will continuously notify the sender of the Start message of current
- * Progress. The com.learning.akka.Worker supervise the CounterService.
+ * com.learning.akka.worker.actor.Worker performs some work when it receives the Start message. It will continuously notify the sender of the Start message of current
+ * Progress. The com.learning.akka.worker.actor.Worker supervise the CounterService.
  */
 public class Worker extends AbstractActor {
 

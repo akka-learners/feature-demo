@@ -1,4 +1,4 @@
-package com.learning.akka;
+package com.learning.akka.worker.actor;
 
 public interface CounterServiceApi {
 
